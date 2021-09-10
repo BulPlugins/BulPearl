@@ -1,0 +1,29 @@
+#BULpearl link : https://www.spigotmc.org/resources/93260/
+#If you like the plugin, let a reviews :)
+
+damage: 2.0
+
+can_kill: true
+
+cooldown: 30
+cooldown_blacklist_world: []
+
+sound: LEVEL_UP
+
+#For 1.8 only
+enderpearl_creative: true
+
+#for 1.9 or higher
+creative_die_from_enderpearl_damage: false
+
+message:
+  UsePearl: "&aYou just used an enderpearl to teleport"
+  OnCooldown: "&cYou have to wait %time% before using again an EnderPearl"
+  EndCooldown: "&aYou can now us again an enderpearl"
+  reload: "&a[BULpearl] config reload"
+  reload_noperm: "&c[BULpearl] you don't have the permission to reload the config"
+
+#For 1.8.or higher
+actionbar:
+  OnCooldown: "&cYou can reuse an enderpearl in &e%time%s"
+  EndCooldown: "&aYou can now use again an EnderPearl"

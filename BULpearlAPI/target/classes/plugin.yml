@@ -1,0 +1,8 @@
+name: BULPearl
+version: 2.3.0
+author: AliHaine, Bulamak
+main: race.Main
+api-version: 1.13
+commands:
+  bulpearl:
+    description: Reload config

@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BULpearlMaven:jar">
+    <output-path>$USER_HOME$/Desktop/Server test/Serveur de test 1.9/plugins</output-path>
+    <root id="archive" name="BULpearlMaven.jar">
+      <element id="module-output" name="BULpearlMaven" />
+      <element id="module-output" name="BULpearl1_9" />
+      <element id="module-output" name="BULpearlAPI" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.6/commons-lang-2.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/md-5/bungeecord-chat/1.8-SNAPSHOT/bungeecord-chat-1.8-20160221.214602-128.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/javax/persistence/persistence-api/1.0/persistence-api-1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/guava/guava/17.0/guava-17.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/avaje/ebean/2.8.1/ebean-2.8.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/yaml/snakeyaml/1.15/snakeyaml-1.15.jar" path-in-jar="/" />
+      <element id="module-output" name="BULpearl1_16" />
+      <element id="module-output" name="BULpearl1_8" />
+      <element id="module-output" name="BULpearl1_14" />
+      <element id="module-output" name="BULpearl1_15" />
+    </root>
+  </artifact>
+</component>
