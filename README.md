@@ -40,25 +40,25 @@ sound: LEVEL_UP
 
 > Define all the messages and actionbar text. If you don't want a specifique message you can define nothing beetwen the two "" quotation
 
-messages:
-  use_pearl: "&a[BULpearl] &aYou just used an enderpearl to teleport"
-  on_cooldown: "&a[BULpearl] &cYou have to wait %time% before using again an EnderPearl"
-  end_cooldown: "&a[BULpearl] &aYou can now us again an enderpearl"
-  craft_created: "&a[BULpearl] &aYou created a craft for EnderPearl"
-  reload: "&a[BULpearl] config reload"
-  error_only_ingame: "&a[BULpearl] You can't use this command in the console'"
-  error_unknow: "&c[BULpearl] Unknow command"
-  no_permission: "&c[BULpearl] you don't have the permission to reload the config"
-actionbar:
-  on_cooldown: "&cYou can reuse an enderpearl in &e%time%s"
-  end_cooldown: "&aYou can now use again an EnderPearl"
+messages:   
+  use_pearl: "&a[BULpearl] &aYou just used an enderpearl to teleport"  
+  on_cooldown: "&a[BULpearl] &cYou have to wait %time% before using again an EnderPearl"   
+  end_cooldown: "&a[BULpearl] &aYou can now us again an enderpearl"   
+  craft_created: "&a[BULpearl] &aYou created a craft for EnderPearl"   
+  reload: "&a[BULpearl] config reload"   
+  error_only_ingame: "&a[BULpearl] You can't use this command in the console'"   
+  error_unknow: "&c[BULpearl] Unknow command"   
+  no_permission: "&c[BULpearl] you don't have the permission to reload the config"   
+actionbar:   
+  on_cooldown: "&cYou can reuse an enderpearl in &e%time%s"   
+  end_cooldown: "&aYou can now use again an EnderPearl"   
 
 ## Commands
 
-| Command | Description | Permission |
-| ------ | ------ | ------|
-| bulpearl craft | Open a inventory that allow the creation of a craft for EnderPearl | bulpearl.admin
-| bulpearl reload | Reload the configuration file | bulpearl.admin
+| Command | Description                                                         | Permission |
+| ------ |---------------------------------------------------------------------| ------|
+| bulpearl craft | Open a inventory that allows the creation of a craft for EnderPearl | bulpearl.admin
+| bulpearl reload | Reload the configuration file                                       | bulpearl.admin
 
 ## Distribution
 

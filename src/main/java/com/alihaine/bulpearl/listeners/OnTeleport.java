@@ -4,7 +4,6 @@ import com.alihaine.bulpearl.BULpearl;
 import com.alihaine.bulpearl.utils.Config;
 import com.alihaine.bulpearl.utils.Messages;
 import org.bukkit.GameMode;
-import org.bukkit.Location;
 import org.bukkit.Sound;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;

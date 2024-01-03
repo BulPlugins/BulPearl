@@ -4,7 +4,6 @@ import com.alihaine.bulpearl.BULpearl;
 import com.alihaine.bulpearl.utils.Config;
 import com.alihaine.bulpearl.utils.Messages;
 import com.alihaine.bulpearl.utils.Reflections;
-import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;

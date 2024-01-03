@@ -10,10 +10,6 @@ public class Config {
     private static final BULpearl buLpearl = BULpearl.getBuLpearl();
     private static FileConfiguration config = buLpearl.getConfig();
 
-    public static FileConfiguration getFileConfig() {
-        return config;
-    }
-
     public static String getConfigString(String path) {
         return config.getString(path);
     }
