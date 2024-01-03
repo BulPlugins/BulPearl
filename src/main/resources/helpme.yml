@@ -1,0 +1,52 @@
+#WARNING. This is not the configuration file, this file simply explains to you all the options
+#Do not modify anything in this file
+
+# Modify damage received from Ender Pearl (Note: 5.0 = 2.5 heart in the life bar).
+damage: 2.0
+
+#EnderPearl damage can kill player ? (true = yes, false = no)
+can_kill: true
+
+#Between each use of enderpearl, the player will have to wait XX (depending on the configuration) seconds (0 = disable)
+cooldown: 30
+
+#Disable the cooldown only in some worlds, add between the [] the worlds you want.
+#EXAMPLE: [MyWorld1, worldEvent, exampleworld3]
+cooldown_blacklist_world: []
+
+#Choose the sound sent to the player when using an EnderPearl (Set false to disabled)
+#To know the list of possible sounds, consult the page: https://helpch.at/docs/X/index.html?org/bukkit/Sound.html
+#Replace the X in the URL with the version of your server (1.8.8 for example)
+sound: LEVEL_UP
+
+#Do you want creative players to be able to die from the damage of enderpearls?
+#true = yes, false = no
+#(this option is only for 1.9 or higher version server
+creative_die_from_enderpearl_damage: false
+
+#If you want disable a message or actionbar, leave the inside of the "" empty (do not delete the "")
+message:
+  UsePearl: "&aYou just used an enderpearl to teleport"
+  OnCooldown: "&cYou have to wait %time% before using again an EnderPearl"
+  EndCooldown: "&aYou can now us again an enderpearl"
+  reload: "&a[BULpearl] config reload"
+  reload_noperm: "&c[BULpearl] you don't have the permission to reload the config"
+
+#(this option is only for 1.8 or higher version server
+actionbar:
+  OnCooldown: "&cYou can reuse an enderpearl in &e%time%s"
+  EndCooldown: "&aYou can now use again an EnderPearl"
+
+PERMISSION OF THE PLUGIN :
+
+#Even if you activate a cooldown on the EnderPearl, players with permission will have no cooldown
+bulpearl.bypass.cd
+
+#Even if you enable players can die from EnderPearl damage, players with permission will not die
+bulpearl.bypass.death
+
+#Allow to do the "/bulpearl reload" command
+bulpearl.reload
+
+#Allow to use "/bulpearl creat" command for create a custom craft for EnderPearl
+bulpearl.create.craft
