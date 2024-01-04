@@ -27,7 +27,7 @@ public class CraftManager {
             craftInventory.setItem(position, itemstack);
         }
 
-        itemstack = new ItemStack(Material.EMERALD_BLOCK, 1, (byte)5);
+        itemstack = new ItemStack(Material.EMERALD_BLOCK, 1);
         itemMeta = itemstack.getItemMeta();
         itemMeta.setDisplayName("§aCreate craft");
         itemstack.setItemMeta(itemMeta);

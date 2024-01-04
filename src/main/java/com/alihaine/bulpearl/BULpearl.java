@@ -9,6 +9,7 @@ import com.alihaine.bulpearl.listeners.OnInventoryClick;
 import com.alihaine.bulpearl.listeners.OnProjectileLaunch;
 import com.alihaine.bulpearl.utils.CoolDown;
 import com.alihaine.bulpearl.utils.Reflections;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -28,6 +29,7 @@ public class BULpearl extends JavaPlugin {
         updateChecker();
         buLpearl = this;
         this.saveDefaultConfig();
+        //new Metrics(this, 20655);
 
         craftManager = new CraftManager();
         coolDown = new CoolDown();
@@ -36,13 +38,13 @@ public class BULpearl extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new OnTeleport(), this);
         getServer().getPluginManager().registerEvents(new OnProjectileLaunch(), this);
         getServer().getPluginManager().registerEvents(new OnInventoryClick(), this);
-        if (Reflections.is1_8Version())
+        if (Reflections.isAbove1_11Version())
             getServer().getPluginManager().registerEvents(new OnInteract(), this);
 
 
         new CraftRegisterFile();
 
-        Bukkit.getConsoleSender().sendMessage("[BULpearl] Enable BULPearl");
+        Bukkit.getConsoleSender().sendMessage("[BULpearl] Enable BULpearl");
     }
 
     @Override

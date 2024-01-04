@@ -4,6 +4,7 @@ import com.alihaine.bulpearl.BULpearl;
 import com.alihaine.bulpearl.utils.Config;
 import com.alihaine.bulpearl.utils.Messages;
 import org.bukkit.GameMode;
+import org.bukkit.Location;
 import org.bukkit.Sound;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -18,12 +19,13 @@ public class OnTeleport implements Listener {
     private FileConfiguration config = BULpearl.getBuLpearl().getConfig();
 
     @EventHandler(priority = EventPriority.HIGHEST)
-    public void onEnderEvent(PlayerTeleportEvent event) {
+    public void onTeleportEvent(PlayerTeleportEvent event) {
         if (event.getCause() != TeleportCause.ENDER_PEARL)
             return;
 
         Player player = event.getPlayer();
-
+        event.setCancelled(true);
+        player.teleport(event.getTo());
         setPlayerHealth(player);
         Messages.sendMessage(event.getPlayer(), Messages.USE_PEARL);
 

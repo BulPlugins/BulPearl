@@ -1,6 +1,6 @@
 # BULpearl
 
-This Minecraft plugin modify the behavior of the EnderPearl for 1.8 to Latest Minecrat version. Link to download  https://www.spigotmc.org/resources/93260/
+This Minecraft plugin modifies the behavior of the EnderPearl from the version 1.8 to the Latest Minecrat version. Link to download  https://www.spigotmc.org/resources/93260/
 
 ## Features
 
@@ -55,10 +55,11 @@ actionbar:
 
 ## Commands
 
-| Command | Description                                                         | Permission |
-| ------ |---------------------------------------------------------------------| ------|
+| Command        | Description                                                         | Permission |
+|----------------|---------------------------------------------------------------------| ------|
 | bulpearl craft | Open a inventory that allows the creation of a craft for EnderPearl | bulpearl.admin
 | bulpearl reload | Reload the configuration file                                       | bulpearl.admin
+|            | Prevent the player from dying due to damage from EnderPearl         | bulpearl.bypass.death
 
 ## Distribution
 
