@@ -29,7 +29,7 @@ public class BULpearl extends JavaPlugin {
         updateChecker();
         buLpearl = this;
         this.saveDefaultConfig();
-        //new Metrics(this, 20655);
+        new Metrics(this, 20655);
 
         craftManager = new CraftManager();
         coolDown = new CoolDown();
