@@ -1,5 +1,7 @@
 package com.alihaine.bulpearl.listeners;
 
+import com.alihaine.bulpearl.BULpearl;
+import com.alihaine.bulpearl.utils.CoolDown;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.EnderPearl;
@@ -7,7 +9,11 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 
+
+//This class are loaded only for the versions above 1.11
 public class OnInteract implements Listener {
+
+    private final CoolDown coolDown = BULpearl.getBuLpearl().getCoolDown();
 
     @EventHandler
     public void onInteractEvent(PlayerInteractEvent event) {
@@ -16,5 +22,7 @@ public class OnInteract implements Listener {
 
         if (event.getPlayer().getGameMode().equals(GameMode.CREATIVE))
             event.getPlayer().launchProjectile(EnderPearl.class);
+        else if (coolDown.isPlayerOnCoolDown(event.getPlayer().getUniqueId()))
+            event.setCancelled(true);
     }
 }

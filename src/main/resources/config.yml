@@ -13,12 +13,12 @@ cooldown_blacklist_world: []
 sound: LEVEL_UP
 
 messages:
-  use_pearl: "&a[BULpearl] &aYou just used an enderpearl to teleport"
+  use_pearl: "&a[BULpearl] &aYou have used an enderpearl to teleport"
   on_cooldown: "&a[BULpearl] &cYou have to wait %time% before using again an EnderPearl"
-  end_cooldown: "&a[BULpearl] &aYou can now us again an enderpearl"
-  craft_created: "&a[BULpearl] &aYou created a craft for EnderPearl"
+  end_cooldown: "&a[BULpearl] &aYou can now use an enderpearl"
+  craft_created: "&a[BULpearl] &aYou have created a craft for EnderPearl"
   reload: "&a[BULpearl] config reload"
-  error_only_ingame: "&a[BULpearl] You can't use this command in the console'"
+  error_only_ingame: "&a[BULpearl] You can't use this command in the console"
   error_unknow: "&c[BULpearl] Unknow command"
   no_permission: "&c[BULpearl] you don't have the permission to reload the config"
 

@@ -42,7 +42,7 @@ public class Reflections {
         if (message == null || message.isEmpty())
             return;
         message = message.replace('&', '§');
-        if (!is1_8Version() && !is1_9Version()) {
+        if (!isAbove1_11Version()) {
             player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(message));
             return ;
         }
@@ -66,5 +66,13 @@ public class Reflections {
 
     public static boolean is1_9Version() {
         return SERVER_VERSION.contains("1_9");
+    }
+
+    public static boolean is1_10Version() {
+        return SERVER_VERSION.contains("1_10");
+    }
+
+    public static boolean isAbove1_11Version() {
+        return is1_8Version() || is1_9Version() || is1_10Version();
     }
 }

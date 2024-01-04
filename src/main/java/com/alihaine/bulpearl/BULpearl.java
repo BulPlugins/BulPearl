@@ -7,6 +7,7 @@ import com.alihaine.bulpearl.listeners.OnInteract;
 import com.alihaine.bulpearl.listeners.OnTeleport;
 import com.alihaine.bulpearl.listeners.OnInventoryClick;
 import com.alihaine.bulpearl.listeners.OnProjectileLaunch;
+import com.alihaine.bulpearl.utils.CoolDown;
 import com.alihaine.bulpearl.utils.Reflections;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,6 +21,7 @@ public class BULpearl extends JavaPlugin {
 
     private static BULpearl buLpearl;
     private CraftManager craftManager;
+    private CoolDown coolDown;
 
     @Override
     public void onEnable() {
@@ -28,6 +30,7 @@ public class BULpearl extends JavaPlugin {
         this.saveDefaultConfig();
 
         craftManager = new CraftManager();
+        coolDown = new CoolDown();
 
         this.getCommand("bulpearl").setExecutor(new BULpearlCMD());
         getServer().getPluginManager().registerEvents(new OnTeleport(), this);
@@ -68,5 +71,7 @@ public class BULpearl extends JavaPlugin {
         return craftManager;
     }
 
-
+    public CoolDown getCoolDown() {
+        return coolDown;
+    }
 }

@@ -2,6 +2,7 @@ package com.alihaine.bulpearl.listeners;
 
 import com.alihaine.bulpearl.BULpearl;
 import com.alihaine.bulpearl.utils.Config;
+import com.alihaine.bulpearl.utils.CoolDown;
 import com.alihaine.bulpearl.utils.Messages;
 import com.alihaine.bulpearl.utils.Reflections;
 import org.bukkit.Material;
@@ -14,13 +15,11 @@ import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.UUID;
 
 public class OnProjectileLaunch implements Listener {
 
     private final BULpearl buLpearl = BULpearl.getBuLpearl();
-    private final HashMap<UUID, Long> coolDownList = new HashMap<>();
+    private final CoolDown coolDown = buLpearl.getCoolDown();
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onProjectileLaunch(ProjectileLaunchEvent event) {
@@ -46,21 +45,21 @@ public class OnProjectileLaunch implements Listener {
         if (worldBlackList.contains(player.getWorld().getName()))
             return;
 
-        if (coolDownList.containsKey(player.getUniqueId())) {
-            Messages.sendMessage(player, Config.getConfigString("messages.on_cooldown").replace("%time%", String.valueOf((coolDownList.get(player.getUniqueId()) - System.currentTimeMillis()) / 1000L)));
+        if (coolDown.isPlayerOnCoolDown(player.getUniqueId())) {
+            Messages.sendMessage(player, Config.getConfigString("messages.on_cooldown").replace("%time%", String.valueOf(coolDown.getCoolDownTimeLeft(player.getUniqueId()))));
             event.setCancelled(true);
             return;
         }
 
-        coolDownList.put(player.getUniqueId(), System.currentTimeMillis() + (coolDownTime * 1000L));
+        coolDown.addPlayerCoolDown(player.getUniqueId());
         displayActionBar(player);
 
-        if (Reflections.is1_8Version() || Reflections.is1_9Version())
+        if (Reflections.isAbove1_11Version())
             return;
         new BukkitRunnable() {
             @Override
             public void run() {
-                player.setCooldown(Material.ENDER_PEARL, coolDownTime * 16);
+                player.setCooldown(Material.ENDER_PEARL, coolDownTime * 19);
                 cancel();
             }
         }.runTaskTimer(buLpearl, 1, 0);
@@ -70,10 +69,10 @@ public class OnProjectileLaunch implements Listener {
         new BukkitRunnable() {
             @Override
             public void run() {
-                long timeLeft = (coolDownList.get(player.getUniqueId()) - System.currentTimeMillis()) / 1000;
+                long timeLeft = coolDown.getCoolDownTimeLeft(player.getUniqueId());
                 Reflections.sendActionBarMessage(player, Config.getConfigString("actionbar.on_cooldown").replace("%time%", String.valueOf(timeLeft)));
                 if (timeLeft <= 0) {
-                    coolDownList.remove(player.getUniqueId());
+                    coolDown.removePlayerCoolDown(player.getUniqueId());
                     Messages.sendMessage(player, Messages.END_COOLDOWN);
                     Reflections.sendActionBarMessage(player, Config.getConfigString("actionbar.end_cooldown"));
                     cancel();
