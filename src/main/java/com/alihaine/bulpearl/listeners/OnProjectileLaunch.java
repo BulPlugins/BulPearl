@@ -1,6 +1,6 @@
 package com.alihaine.bulpearl.listeners;
 
-import com.alihaine.bulpearl.BULpearl;
+import com.alihaine.bulpearl.BulPearl;
 import com.alihaine.bulpearl.utils.Config;
 import com.alihaine.bulpearl.utils.CoolDown;
 import com.alihaine.bulpearl.utils.Messages;
@@ -18,8 +18,8 @@ import java.util.ArrayList;
 
 public class OnProjectileLaunch implements Listener {
 
-    private final BULpearl buLpearl = BULpearl.getBuLpearl();
-    private final CoolDown coolDown = buLpearl.getCoolDown();
+    private final BulPearl bulPearl = BulPearl.getBulPearl();
+    private final CoolDown coolDown = bulPearl.getCoolDown();
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onProjectileLaunch(ProjectileLaunchEvent event) {
@@ -62,7 +62,7 @@ public class OnProjectileLaunch implements Listener {
                 player.setCooldown(Material.ENDER_PEARL, coolDownTime * 19);
                 cancel();
             }
-        }.runTaskTimer(buLpearl, 1, 0);
+        }.runTaskTimer(bulPearl, 1, 0);
     }
 
     private void displayActionBar(final Player player) {
@@ -78,6 +78,6 @@ public class OnProjectileLaunch implements Listener {
                     cancel();
                 }
             }
-        }.runTaskTimer(buLpearl, 0,10);
+        }.runTaskTimer(bulPearl, 0,10);
     }
 }

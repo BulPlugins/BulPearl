@@ -1,6 +1,6 @@
 package com.alihaine.bulpearl.craft;
 
-import com.alihaine.bulpearl.BULpearl;
+import com.alihaine.bulpearl.BulPearl;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -11,12 +11,12 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public class CraftRegisterFile {
-    private final static File file = new File(BULpearl.getBuLpearl().getDataFolder(), "craftregister.yml");
+    private final static File file = new File(BulPearl.getBulPearl().getDataFolder(), "craftregister.yml");
     private final static YamlConfiguration confcraft = YamlConfiguration.loadConfiguration(file);
 
     public CraftRegisterFile() {
         HashMap<Character, ItemStack> recipeItemStack;
-        BULpearl buLpearl = BULpearl.getBuLpearl();
+        BulPearl buLpearl = BulPearl.getBulPearl();
         if (!file.exists()) {
             file.getParentFile().mkdirs();
             try {

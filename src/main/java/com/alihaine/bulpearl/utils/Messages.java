@@ -1,6 +1,6 @@
 package com.alihaine.bulpearl.utils;
 
-import com.alihaine.bulpearl.BULpearl;
+import com.alihaine.bulpearl.BulPearl;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -17,10 +17,10 @@ public enum Messages {
     ERROR_ONLY_INGAME,
     ERROR_UNKNOW;
 
-    private static FileConfiguration config = BULpearl.getBuLpearl().getConfig();
+    private static FileConfiguration config = BulPearl.getBulPearl().getConfig();
 
     public static void sendMessage(Player p, Messages msg) {
-        config = BULpearl.getBuLpearl().getConfig();
+        config = BulPearl.getBulPearl().getConfig();
 
         List<String> msgList = config.getConfigurationSection(("messages")).getStringList(msg.name().toLowerCase());
         if (msgList.isEmpty())

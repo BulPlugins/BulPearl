@@ -1,6 +1,7 @@
-# BULpearl
+# BulPearl
 
-This Minecraft plugin modifies the behavior of the EnderPearl from the version 1.8 to the Latest Minecrat version. Link to download  https://www.spigotmc.org/resources/93260/
+This Minecraft plugin modifies the behavior of the EnderPearl. Compatible with version 1.8 to the Latest Minecrat version.   
+Link to download: https://www.spigotmc.org/resources/93260/ or https://builtbybit.com/resources/37040/
 
 ## Features
 
@@ -53,7 +54,7 @@ actionbar:
   on_cooldown: "&cYou can reuse an enderpearl in &e%time%s"   
   end_cooldown: "&aYou can now use again an EnderPearl"   
 
-## Commands
+## Commands and permissions
 
 | Command        | Description                                                         | Permission |
 |----------------|---------------------------------------------------------------------| ------|

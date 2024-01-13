@@ -1,6 +1,6 @@
 package com.alihaine.bulpearl.listeners;
 
-import com.alihaine.bulpearl.BULpearl;
+import com.alihaine.bulpearl.BulPearl;
 import com.alihaine.bulpearl.utils.CoolDown;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
@@ -13,7 +13,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 //This class are loaded only for the versions above 1.11
 public class OnInteract implements Listener {
 
-    private final CoolDown coolDown = BULpearl.getBuLpearl().getCoolDown();
+    private final CoolDown coolDown = BulPearl.getBulPearl().getCoolDown();
 
     @EventHandler
     public void onInteractEvent(PlayerInteractEvent event) {

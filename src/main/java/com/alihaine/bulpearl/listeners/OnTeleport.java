@@ -1,12 +1,10 @@
 package com.alihaine.bulpearl.listeners;
 
-import com.alihaine.bulpearl.BULpearl;
 import com.alihaine.bulpearl.utils.Config;
 import com.alihaine.bulpearl.utils.Messages;
+import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
-import org.bukkit.Location;
 import org.bukkit.Sound;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -15,8 +13,6 @@ import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 
 public class OnTeleport implements Listener {
-
-    private FileConfiguration config = BULpearl.getBuLpearl().getConfig();
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onTeleportEvent(PlayerTeleportEvent event) {
@@ -32,9 +28,9 @@ public class OnTeleport implements Listener {
         if (!Config.getConfigBoolean("sound"))
             return;
         try {
-            player.playSound(player.getLocation(), Sound.valueOf(config.getString("sound")), 10F, 10F);
+            player.playSound(player.getLocation(), Sound.valueOf(Config.getConfigString("sound")), 10F, 10F);
         } catch (Exception e) {
-            System.out.println("BULpearl: An error occured, it seems that the sound you defined does not exist" + e);
+            Bukkit.getConsoleSender().sendMessage("BULpearl: An error occured, it seems that the sound you defined does not exist" + e);
         }
     }
 

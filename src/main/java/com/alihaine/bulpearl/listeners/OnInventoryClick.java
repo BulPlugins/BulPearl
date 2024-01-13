@@ -1,6 +1,6 @@
 package com.alihaine.bulpearl.listeners;
 
-import com.alihaine.bulpearl.BULpearl;
+import com.alihaine.bulpearl.BulPearl;
 import com.alihaine.bulpearl.craft.CraftManager;
 import com.alihaine.bulpearl.utils.Messages;
 import org.bukkit.Material;
@@ -11,7 +11,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 
 public class OnInventoryClick implements Listener {
 
-    private final CraftManager craftManager = BULpearl.getBuLpearl().getCraftManager();
+    private final CraftManager craftManager = BulPearl.getBulPearl().getCraftManager();
 
     @EventHandler()
     public void onInventoryClick(InventoryClickEvent event) {

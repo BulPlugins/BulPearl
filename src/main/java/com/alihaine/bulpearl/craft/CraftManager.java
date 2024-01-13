@@ -1,6 +1,6 @@
 package com.alihaine.bulpearl.craft;
 
-import com.alihaine.bulpearl.BULpearl;
+import com.alihaine.bulpearl.BulPearl;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -12,7 +12,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.*;
 
 public class CraftManager {
-    private final BULpearl buLpearl = BULpearl.getBuLpearl();
+    private final BulPearl buLpearl = BulPearl.getBulPearl();
     private final Inventory craftInventory;
 
     public CraftManager() {

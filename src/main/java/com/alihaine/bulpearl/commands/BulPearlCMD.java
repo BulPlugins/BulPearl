@@ -1,6 +1,6 @@
 package com.alihaine.bulpearl.commands;
 
-import com.alihaine.bulpearl.BULpearl;
+import com.alihaine.bulpearl.BulPearl;
 import com.alihaine.bulpearl.craft.CraftManager;
 import com.alihaine.bulpearl.utils.Config;
 import com.alihaine.bulpearl.utils.Messages;
@@ -9,8 +9,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class BULpearlCMD implements CommandExecutor {
-    private final CraftManager craftManager = BULpearl.getBuLpearl().getCraftManager();
+public class BulPearlCMD implements CommandExecutor {
+    private final CraftManager craftManager = BulPearl.getBulPearl().getCraftManager();
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] strings) {

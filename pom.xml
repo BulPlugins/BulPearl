@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.alihaine.bulpearl</groupId>
-    <artifactId>BULpearl</artifactId>
-    <version>3.1.1</version>
+    <artifactId>BulPearl</artifactId>
+    <version>3.1.2</version>
 
     <dependencies>
         <dependency>

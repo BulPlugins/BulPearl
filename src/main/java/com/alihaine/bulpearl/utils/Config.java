@@ -1,14 +1,14 @@
 package com.alihaine.bulpearl.utils;
 
-import com.alihaine.bulpearl.BULpearl;
+import com.alihaine.bulpearl.BulPearl;
 import org.bukkit.configuration.file.FileConfiguration;
 
 import java.util.List;
 
 public class Config {
 
-    private static final BULpearl buLpearl = BULpearl.getBuLpearl();
-    private static FileConfiguration config = buLpearl.getConfig();
+    private static final BulPearl bulPearl = BulPearl.getBulPearl();
+    private static FileConfiguration config = bulPearl.getConfig();
 
     public static String getConfigString(String path) {
         return config.getString(path);
@@ -27,8 +27,8 @@ public class Config {
     }
 
     public static void reloadConfig() {
-        buLpearl.reloadConfig();
-        config = buLpearl.getConfig();
+        bulPearl.reloadConfig();
+        config = bulPearl.getConfig();
     }
 
 }
