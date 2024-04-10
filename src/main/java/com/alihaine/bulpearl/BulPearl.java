@@ -44,12 +44,12 @@ public class BulPearl extends JavaPlugin {
 
         new CraftRegisterFile();
 
-        Bukkit.getConsoleSender().sendMessage("[BULpearl] Enable BULpearl");
+        Bukkit.getConsoleSender().sendMessage("[BulPearl] Enable BulPearl");
     }
 
     @Override
     public void onDisable() {
-        Bukkit.getConsoleSender().sendMessage("[BULpearl] Disable BULPearl");
+        Bukkit.getConsoleSender().sendMessage("[BulPearl] Disable BulPearl");
     }
 
     private void updateChecker() {
@@ -61,7 +61,7 @@ public class BulPearl extends JavaPlugin {
                 Bukkit.getConsoleSender().sendMessage("------------------------------------------------------------------");
             }
         } catch (IOException exception) {
-            this.getLogger().info("[BULpearl] Cannot look for updates please contact dev in private: " + exception.getMessage());
+            this.getLogger().info("[BulPearl] Cannot look for updates please join discord: https://discord.gg/wxnTV68dX2" + exception.getMessage());
         }
     }
 

@@ -23,8 +23,12 @@ public enum Messages {
         config = BulPearl.getBulPearl().getConfig();
 
         List<String> msgList = config.getConfigurationSection(("messages")).getStringList(msg.name().toLowerCase());
-        if (msgList.isEmpty())
-            msgList.add(config.getConfigurationSection(("messages")).getString(msg.name().toLowerCase()));
+        if (msgList.isEmpty()) {
+            String value = config.getConfigurationSection(("messages")).getString(msg.name().toLowerCase());
+            if (value == null || value.isEmpty())
+                return;
+            msgList.add(value);
+        }
         for (String line : msgList) {
             if (p == null)
                 Bukkit.getConsoleSender().sendMessage(line.replace('&', '§'));

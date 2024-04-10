@@ -37,11 +37,12 @@ public class OnTeleport implements Listener {
     private void setPlayerHealth(Player player) {
         double dmg = Config.getConfigInt("damage");
 
-        if (player.getHealth() - dmg > 0)
-            player.setHealth(player.getHealth() - dmg);
-        else if (!Config.getConfigBoolean("can_kill") || player.hasPermission("bulpearl.bypass.death") || player.getGameMode().equals(GameMode.CREATIVE))
+        Bukkit.getConsoleSender().sendMessage(String.valueOf(!Config.getConfigBoolean("can_kill")), String.valueOf(player.hasPermission("bulpearl.bypass.death")));
+
+        if (player.getHealth() - dmg <= 0 && (!Config.getConfigBoolean("can_kill") || player.hasPermission("bulpearl.bypass.death") || player.getGameMode().equals(GameMode.CREATIVE)))
             player.setHealth(0.5);
         else
-            player.setHealth(0);
+            player.damage(dmg);
+
     }
 }

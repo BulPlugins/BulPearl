@@ -1,5 +1,5 @@
-#BULpearl link : https://www.spigotmc.org/resources/93260/
-#If you like the plugin, let a reviews :)
+#BulPearl link : https://www.spigotmc.org/resources/93260/
+#If you like the plugin, let a star on the Github repo https://github.com/AliHaine/BulPearl
 
 damage: 2.0
 
@@ -13,14 +13,14 @@ cooldown_blacklist_world: []
 sound: LEVEL_UP
 
 messages:
-  use_pearl: "&a[BULpearl] &aYou have used an enderpearl to teleport"
-  on_cooldown: "&a[BULpearl] &cYou have to wait %time% before using again an EnderPearl"
-  end_cooldown: "&a[BULpearl] &aYou can now use an enderpearl"
-  craft_created: "&a[BULpearl] &aYou have created a craft for EnderPearl"
-  reload: "&a[BULpearl] config reload"
-  error_only_ingame: "&a[BULpearl] You can't use this command in the console"
-  error_unknow: "&c[BULpearl] Unknow command"
-  no_permission: "&c[BULpearl] you don't have the permission to reload the config"
+  use_pearl: "&a[BulPearl] &aYou have used an enderpearl to teleport"
+  on_cooldown: "&a[BulPearl] &cYou have to wait %time% before using again an EnderPearl"
+  end_cooldown: "&a[BulPearl] &aYou can now use an enderpearl"
+  craft_created: "&a[BulPearl] &aYou have created a craft for EnderPearl"
+  reload: "&a[BulPearl] config reload"
+  error_only_ingame: "&a[BulPearl] You can't use this command in the console"
+  error_unknow: "&c[BulPearl] Unknow command"
+  no_permission: "&c[BulPearl] you don't have the permission to reload the config"
 
 actionbar:
   on_cooldown: "&cYou can reuse an enderpearl in &e%time%s"

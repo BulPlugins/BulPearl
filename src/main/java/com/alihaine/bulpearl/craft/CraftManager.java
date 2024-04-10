@@ -16,7 +16,7 @@ public class CraftManager {
     private final Inventory craftInventory;
 
     public CraftManager() {
-        craftInventory = Bukkit.createInventory(null, 27, "§6BULpearl craft");
+        craftInventory = Bukkit.createInventory(null, 27, "§6BulPearl craft");
 
         ItemStack itemstack = new ItemStack(Material.GLASS, 1, (byte)15);
         ItemMeta itemMeta = itemstack.getItemMeta();

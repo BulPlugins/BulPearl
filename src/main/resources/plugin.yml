@@ -2,7 +2,7 @@ name: BULPearl
 version: ${project.version}
 description: ${project.description}
 author: AliHaine
-main: com.alihaine.bulpearl.BULpearl
+main: com.alihaine.bulpearl.BulPearl
 api-version: 1.13
 commands:
   bulpearl:
