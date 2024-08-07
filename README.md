@@ -41,6 +41,11 @@ sound: LEVEL_UP
 
 > Define all the messages and actionbar text. If you don't want a specifique message you can define nothing beetwen the two "" quotation
 
+enable_craft_creator: true
+
+> Control the craft creator menu. After creating your craft for EnderPearl, set this line to "false" to avoid loading unnecessary listeners,
+> which will enhance the performance.
+
 messages:   
   use_pearl: "&a[BULpearl] &aYou just used an enderpearl to teleport"  
   on_cooldown: "&a[BULpearl] &cYou have to wait %time% before using again an EnderPearl"   

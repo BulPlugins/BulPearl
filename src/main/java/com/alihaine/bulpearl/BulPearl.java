@@ -7,6 +7,7 @@ import com.alihaine.bulpearl.listeners.OnInteract;
 import com.alihaine.bulpearl.listeners.OnTeleport;
 import com.alihaine.bulpearl.listeners.OnInventoryClick;
 import com.alihaine.bulpearl.listeners.OnProjectileLaunch;
+import com.alihaine.bulpearl.utils.Config;
 import com.alihaine.bulpearl.utils.CoolDown;
 import com.alihaine.bulpearl.utils.Reflections;
 import org.bstats.bukkit.Metrics;
@@ -37,7 +38,8 @@ public class BulPearl extends JavaPlugin {
         this.getCommand("bulpearl").setExecutor(new BulPearlCMD());
         getServer().getPluginManager().registerEvents(new OnTeleport(), this);
         getServer().getPluginManager().registerEvents(new OnProjectileLaunch(), this);
-        getServer().getPluginManager().registerEvents(new OnInventoryClick(), this);
+        if (Config.getConfigBoolean("enable_craft_creator"))
+            getServer().getPluginManager().registerEvents(new OnInventoryClick(), this);
         if (Reflections.isAbove1_11Version())
             getServer().getPluginManager().registerEvents(new OnInteract(), this);
 

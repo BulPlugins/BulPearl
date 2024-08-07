@@ -12,6 +12,8 @@ cooldown_blacklist_world: []
 
 sound: LEVEL_UP
 
+enable_craft_creator: true
+
 messages:
   use_pearl: "&a[BulPearl] &aYou have used an enderpearl to teleport"
   on_cooldown: "&a[BulPearl] &cYou have to wait %time% before using again an EnderPearl"
@@ -20,6 +22,7 @@ messages:
   reload: "&a[BulPearl] config reload"
   error_only_ingame: "&a[BulPearl] You can't use this command in the console"
   error_unknow: "&c[BulPearl] Unknow command"
+  error_craft_creator_disable: "&c[BulPearl] The craft creator is disable in the config.yml"
   no_permission: "&c[BulPearl] you don't have the permission to reload the config"
 
 actionbar:
