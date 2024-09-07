@@ -18,10 +18,27 @@ public class Reflections {
     private static Constructor<?> CHATMESSAGE_CONSTRUCTOR;
     private static final String SERVER_VERSION;
 
+    /*
+        For old versions, SERVER_VERSION will contain the server version (as NMS value).
+        The plugin needs to distinguish between version 1.8 1.9 or 1.10. Determining
+        the exact version for versions above 1.10 is not useful.
+     */
+
     static {
-        String name = Bukkit.getServer().getClass().getName();
-        name = name.substring(name.indexOf("craftbukkit.") + "craftbukkit.".length());
-        SERVER_VERSION = name.substring(0, name.indexOf("."));
+        String serverVersion;
+        try {
+            String name = Bukkit.getServer().getClass().getName();
+            name = name.substring(name.indexOf("craftbukkit.") + "craftbukkit.".length());
+            serverVersion = name.substring(0, name.indexOf("."));
+        } catch (Exception e) {
+            serverVersion = "Unknown";
+        }
+        SERVER_VERSION = serverVersion;
+        if (serverVersion.equalsIgnoreCase("Unknown"))
+            Bukkit.getConsoleSender().sendMessage("§a[BulPearl] §eYour server version is 1.11 or higher.");
+        else
+            Bukkit.getConsoleSender().sendMessage("§a[BulPearl] §eYour server version is " + SERVER_VERSION);
+        Bukkit.getConsoleSender().sendMessage("§a[BulPearl] §eIf that's not the case, please join the discord and contact the dev.");
         if (SERVER_VERSION.contains("1_8") || SERVER_VERSION.contains("1_9")) {
             try {
                 Reflections.CRAFTPLAYERCLASS = Class.forName("org.bukkit.craftbukkit." + Reflections.SERVER_VERSION + ".entity.CraftPlayer");

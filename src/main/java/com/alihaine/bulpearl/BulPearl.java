@@ -46,12 +46,12 @@ public class BulPearl extends JavaPlugin {
 
         new CraftRegisterFile();
 
-        Bukkit.getConsoleSender().sendMessage("[BulPearl] Enable BulPearl");
+        Bukkit.getConsoleSender().sendMessage("§a[BulPearl] §eEnable BulPearl");
     }
 
     @Override
     public void onDisable() {
-        Bukkit.getConsoleSender().sendMessage("[BulPearl] Disable BulPearl");
+        Bukkit.getConsoleSender().sendMessage("§a[BulPearl] §cDisable BulPearl");
     }
 
     private void updateChecker() {
