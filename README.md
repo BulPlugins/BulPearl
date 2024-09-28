@@ -47,14 +47,15 @@ enable_craft_creator: true
 > which will enhance the performance.
 
 messages:   
-  use_pearl: "&a[BULpearl] &aYou just used an enderpearl to teleport"  
-  on_cooldown: "&a[BULpearl] &cYou have to wait %time% before using again an EnderPearl"   
-  end_cooldown: "&a[BULpearl] &aYou can now us again an enderpearl"   
-  craft_created: "&a[BULpearl] &aYou created a craft for EnderPearl"   
-  reload: "&a[BULpearl] config reload"   
-  error_only_ingame: "&a[BULpearl] You can't use this command in the console'"   
-  error_unknow: "&c[BULpearl] Unknow command"   
-  no_permission: "&c[BULpearl] you don't have the permission to reload the config"   
+  use_pearl: "&a[BulPearl] &eYou have used an Ender Pearl to teleport."
+  on_cooldown: "&a[BulPearl] &cYou must wait %time% before using an Ender Pearl again."
+  end_cooldown: "&a[BulPearl] &eYou can now use an Ender Pearl."
+  craft_created: "&a[BulPearl] &eYou have created a craft for Ender Pearls."
+  reload: "&a[BulPearl] Configuration reloaded."
+  error_only_ingame: "&c[BulPearl] You can't use this command from the console."
+  error_unknown: "&c[BulPearl] Unknown command."
+  error_craft_creator_disabled: "&c[BulPearl] The craft creator is disabled in the config.yml."
+  no_permission: "&c[BulPearl] You do not have permission to reload the configuration."
 actionbar:   
   on_cooldown: "&cYou can reuse an enderpearl in &e%time%s"   
   end_cooldown: "&aYou can now use again an EnderPearl"   

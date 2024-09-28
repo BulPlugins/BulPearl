@@ -1,5 +1,6 @@
 package com.alihaine.bulpearl.listeners;
 
+import com.alihaine.bulpearl.BulPearl;
 import com.alihaine.bulpearl.utils.Config;
 import com.alihaine.bulpearl.utils.Messages;
 import org.bukkit.Bukkit;
@@ -21,7 +22,7 @@ public class OnTeleport implements Listener {
 
         Player player = event.getPlayer();
         event.setCancelled(true);
-        player.teleport(event.getTo());
+        Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(BulPearl.getBulPearl(), () -> player.teleport(event.getTo()), 1L);
         setPlayerHealth(player);
         Messages.sendMessage(event.getPlayer(), Messages.USE_PEARL);
 
@@ -36,8 +37,6 @@ public class OnTeleport implements Listener {
 
     private void setPlayerHealth(Player player) {
         double dmg = Config.getConfigInt("damage");
-
-        Bukkit.getConsoleSender().sendMessage(String.valueOf(!Config.getConfigBoolean("can_kill")), String.valueOf(player.hasPermission("bulpearl.bypass.death")));
 
         if (player.getHealth() - dmg <= 0 && (!Config.getConfigBoolean("can_kill") || player.hasPermission("bulpearl.bypass.death") || player.getGameMode().equals(GameMode.CREATIVE)))
             player.setHealth(0.5);

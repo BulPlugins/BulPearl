@@ -6,7 +6,7 @@
 
     <groupId>com.alihaine.bulpearl</groupId>
     <artifactId>BulPearl</artifactId>
-    <version>3.1.5</version>
+    <version>3.1.6</version>
 
     <dependencies>
         <dependency>
