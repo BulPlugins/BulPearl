@@ -2,7 +2,6 @@ package com.alihaine.bulpearl.listeners;
 
 import com.alihaine.bulpearl.BulPearl;
 import com.alihaine.bulpearl.utils.Config;
-import com.alihaine.bulpearl.utils.Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Sound;
@@ -24,7 +23,6 @@ public class OnTeleport implements Listener {
         event.setCancelled(true);
         Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(BulPearl.getBulPearl(), () -> player.teleport(event.getTo()), 1L);
         setPlayerHealth(player);
-        Messages.sendMessage(event.getPlayer(), Messages.USE_PEARL);
 
         if (!Config.getConfigBoolean("sound"))
             return;

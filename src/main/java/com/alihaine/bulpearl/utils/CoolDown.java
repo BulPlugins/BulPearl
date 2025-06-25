@@ -1,5 +1,7 @@
 package com.alihaine.bulpearl.utils;
 
+import org.bukkit.entity.Player;
+
 import java.util.HashMap;
 import java.util.UUID;
 
@@ -11,10 +13,8 @@ public class CoolDown {
         return coolDownList.containsKey(playerId);
     }
 
-    public void addPlayerCoolDown(UUID playerId) {
-        int coolDown = Config.getConfigInt("cooldown");
-
-        coolDownList.put(playerId, System.currentTimeMillis() + (coolDown * 1000L));
+    public void addPlayerCoolDown(UUID playerId, int cd) {
+        coolDownList.put(playerId, System.currentTimeMillis() + (cd * 1000L));
     }
 
     public void removePlayerCoolDown(UUID playerId) {
@@ -23,5 +23,13 @@ public class CoolDown {
 
     public long getCoolDownTimeLeft(UUID playerId) {
         return (coolDownList.get(playerId) - System.currentTimeMillis()) / 1000;
+    }
+
+    public int getCoolDownTime(Player player) {
+        for (int i = 1; i <= 600; i++) {
+            if (player.hasPermission("bulpearl.cd." + i))
+                return i;
+        }
+        return Config.getConfigInt("cooldown");
     }
 }

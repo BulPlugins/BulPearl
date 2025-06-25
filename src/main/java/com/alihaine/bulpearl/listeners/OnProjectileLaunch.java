@@ -38,6 +38,9 @@ public class OnProjectileLaunch implements Listener {
 
         if (player.hasPermission("bulpearl.bypass.cd"))
             return;
+
+        Messages.sendMessage((Player)event.getEntity().getShooter(), Messages.USE_PEARL);
+
         coolDownTime = Config.getConfigInt("cooldown");
         if (coolDownTime <= 0)
             return;
@@ -51,7 +54,7 @@ public class OnProjectileLaunch implements Listener {
             return;
         }
 
-        coolDown.addPlayerCoolDown(player.getUniqueId());
+        coolDown.addPlayerCoolDown(player.getUniqueId(), coolDown.getCoolDownTime(player));
         displayActionBar(player);
 
         if (Reflections.isAbove1_11Version())
