@@ -11,4 +11,4 @@
 
 Check out metrics and more details on my personal website https://aliyag.dev/project/bulpearl
 
-Check out bStats complete metrics https://bstats.org/plugin/bukkit/BulMultiverse/22989 
+Check out bStats complete metrics https://bstats.org/plugin/bukkit/BULpearl/20655
