@@ -16,18 +16,19 @@ public class OnInventoryClick implements Listener {
     @EventHandler()
     public void onInventoryClick(InventoryClickEvent event) {
         Player p = (Player) event.getWhoClicked();
-
-        if (!event.getView().getTitle().equals("§6BULpearl craft"))
+        if (!event.getView().getTitle().equals("§6BulPearl craft"))
             return;
         if (event.getCurrentItem() == null)
             return;
 
         Material material = event.getCurrentItem().getType();
+
         if (material.equals(Material.EMERALD_BLOCK) || material.equals(Material.GLASS)) {
             event.setCancelled(true);
             if (!material.equals(Material.EMERALD_BLOCK))
                 return;
-        }
+        } else
+            return;
 
         if (craftManager.createCraft(craftManager.convertInvToMap(event.getInventory())))
             Messages.sendMessage(p, Messages.CRAFT_CREATED);

@@ -34,8 +34,7 @@ public class BulPearlCMD implements CommandExecutor {
             if (Config.getConfigBoolean("enable_craft_creator"))
                 craftManager.craftOpenGui((Player) sender);
             else
-                Messages.sendMessage((Player) sender, Messages.ERROR_CRAFT_CREATOR_DISABLE);
-
+                Messages.sendMessage((Player) sender, Messages.ERROR_CRAFT_CREATOR_DISABLED);
         }
         else if (strings[0].equalsIgnoreCase("reload")) {
             Config.reloadConfig();

@@ -38,8 +38,10 @@ public class CraftManager {
         int buffer = 0;
         HashMap<Character, ItemStack> recipeItemStack = new HashMap<>();
         for (int i = 3; i < 12; i++) {
-            if (inventory.getItem(i + buffer) != null)
+            if (inventory.getItem(i + buffer) != null) {
                 recipeItemStack.put((char) (i + 45), inventory.getItem(i + buffer));
+                inventory.setItem(i + buffer, null);
+            }
             if (i == 5 || i + buffer == 14)
                 buffer += 6;
         }
